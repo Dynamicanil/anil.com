@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine for Forever ?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebee;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #d32f2f;
+            background-image: url('https://i.pinimg.com/originals/8f/92/86/8f9286ebbc0e6f95b389aee0c8f85f4f.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .photo-frame {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 10px solid white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .yes-btn {
+            background-color: #4CAF50;
+        }
+        
+        .no-btn {
+            background-color: #f44336;
+        }
+        
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .hearts {
+            font-size: 2em;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        footer {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #757575;
+        }
+        
+        /* For the "No" button movement */
+        .runaway {
+            position: relative;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts">❤️ ❤️ ❤️</div>
+        <h1>My Dearest jaan [Manisha]</h1>
+        
+        <div class="photo-frame">
+            <!-- Replace with your photo -->
+            <img src="E:\manisha\manisha.jpg" alt="Our Photo">
+        </div>
+        
+        <p>From the moment we met, my life has been brighter and more beautiful.</p>
+        <p>Every day with you is a gift I cherish.</p>
+        <p>Today, I want to ask you the most important question of my life...</p>
+        
+        <h1>Will You Marry Me?</h1>
+        
+        <div>
+            <a href="#" class="btn yes-btn" id="yesBtn">YES!</a>
+            <a href="#" class="btn no-btn" id="noBtn">No</a>
+        </div>
+        
+        <div id="response" style="display: none; margin-top: 30px;">
+            <h2>I LOVE YOU! ❤️</h2>
+            <p>You've made me the happiest person in the world!</p>
+        </div>
+        
+        <footer>
+            <p><b>Created with love by [your Anil 🥺]</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple JavaScript for the buttons (optional)
+        document.getElementById('yesBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('response').style.display = 'block';
+            document.querySelector('.hearts').innerHTML = '❤️ ❤️ ❤️ ❤️ ❤️';
+            document.getElementById('noBtn').style.display = 'none';
+            this.style.transform = 'scale(1.5)';
+            this.style.backgroundColor = '#2E7D32';
+        });
+        
+        document.getElementById('noBtn').addEventListener('mouseover', function() {
+            // Make the "No" button move away when hovered
+            this.classList.add('runaway');
+            const x = Math.random() * 200 - 100;
+            const y = Math.random() * 200 - 100;
+            this.style.left = x + 'px';
+            this.style.top = y + 'px';
+        });
+    </script>
+</body>
+</html>
